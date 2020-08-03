@@ -120,7 +120,8 @@ export class AppComponent implements OnInit {
         "title": "Fall detected",
         "body": "UMA device has triggered a fall detection !!"
       },
-      "to": "ftEOtBvPnYA:APA91bEFmPA_cCyYFV8emQqje0gGGWdNohHMjNksNKYRfsTc5maPt4aC-714JMp4JEwWPh0hzftYu9giVcrYk4rfCzRe7Oi0d3yj4Kv7aFtoAYzSGURYJNAqX9QoAY1F3i2sG6f72Yiy"
+      "to" : "e3M7hyo1ThiPW6N6hlGFGD:APA91bHHAu80FicMRGBbZha54OAklAYS5Emuj7t-pHkxi2uOPXUCPi-Ia1neuAghWjdJlQBD55wXHg_bmV2Q0GTfgOwDk7asOt_w00H32Lt0bHA1yKlZIzXi_85B5WCVxv5DlrszujZi"
+      //"to": "ftEOtBvPnYA:APA91bEFmPA_cCyYFV8emQqje0gGGWdNohHMjNksNKYRfsTc5maPt4aC-714JMp4JEwWPh0hzftYu9giVcrYk4rfCzRe7Oi0d3yj4Kv7aFtoAYzSGURYJNAqX9QoAY1F3i2sG6f72Yiy"
     }, httpOptions).subscribe(posts => {
 
       console.log(posts);
