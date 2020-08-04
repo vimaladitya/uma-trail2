@@ -120,8 +120,9 @@ export class AppComponent implements OnInit {
         "title": "Fall detected",
         "body": "UMA device has triggered a fall detection !!"
       },
-      "to" : "e3M7hyo1ThiPW6N6hlGFGD:APA91bHHAu80FicMRGBbZha54OAklAYS5Emuj7t-pHkxi2uOPXUCPi-Ia1neuAghWjdJlQBD55wXHg_bmV2Q0GTfgOwDk7asOt_w00H32Lt0bHA1yKlZIzXi_85B5WCVxv5DlrszujZi"
-      //"to": "ftEOtBvPnYA:APA91bEFmPA_cCyYFV8emQqje0gGGWdNohHMjNksNKYRfsTc5maPt4aC-714JMp4JEwWPh0hzftYu9giVcrYk4rfCzRe7Oi0d3yj4Kv7aFtoAYzSGURYJNAqX9QoAY1F3i2sG6f72Yiy"
+      "to":"d_lfdeZXSum4hYYVe32toF:APA91bErSMEyWx6R-e78eVyvL2Dvm9SAfMiQ0n4g2d7NiAm29qUqVqOsMC8PLT54EjNtREQ8rBlQM9V2Ff1ePhlAPyKRtZQWbp4tRON8PGR4vTYjN28J8-kxhlUg31R5sjhOoC22f8zt" //TAB app
+     // "to" : "e3M7hyo1ThiPW6N6hlGFGD:APA91bHHAu80FicMRGBbZha54OAklAYS5Emuj7t-pHkxi2uOPXUCPi-Ia1neuAghWjdJlQBD55wXHg_bmV2Q0GTfgOwDk7asOt_w00H32Lt0bHA1yKlZIzXi_85B5WCVxv5DlrszujZi" //s3 app
+      //"to": "ftEOtBvPnYA:APA91bEFmPA_cCyYFV8emQqje0gGGWdNohHMjNksNKYRfsTc5maPt4aC-714JMp4JEwWPh0hzftYu9giVcrYk4rfCzRe7Oi0d3yj4Kv7aFtoAYzSGURYJNAqX9QoAY1F3i2sG6f72Yiy" //PoC app
     }, httpOptions).subscribe(posts => {
 
       console.log(posts);
