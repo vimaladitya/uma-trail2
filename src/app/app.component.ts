@@ -116,7 +116,7 @@ export class AppComponent implements OnInit {
 
     // console.log(dateNowISO);
     this.http.post('https://fcm.googleapis.com/fcm/send', {
-      "notification": {
+      "data": {
         "title": "Fall detected",
         "body": "UMA device has triggered a fall detection !!"
       },
