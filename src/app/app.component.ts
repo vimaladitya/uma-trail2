@@ -140,7 +140,6 @@ export class AppComponent implements OnInit {
     var dateNow: Date = new Date();
     var date = new Date()
     // console.log(date);
-    var  uuid = UUID.randomUUID().toString().replace("-", "");
 
     // console.log(dateNowISO);
     this.http.post('https://nameless-hamlet-83858.herokuapp.com/api/messages/addMessage', {
