@@ -70,7 +70,6 @@ export class AppComponent implements OnInit {
 
     // console.log(dateNowISO);
     this.http.post<Table>('https://nameless-hamlet-83858.herokuapp.com/api/messages/fetchMessage', {}).subscribe(posts => {
-
       var result = JSON.stringify(posts['message'])
       result = JSON.parse(result);
       this.tableData = posts['message'];
@@ -118,7 +117,7 @@ export class AppComponent implements OnInit {
     this.http.post('https://fcm.googleapis.com/fcm/send', {
       "data": {
         "title": "Camila J's has fallen",
-        "body": "Camila J’s has fallen. Please attend the case. !"
+        "body": "Please attend the case. !"
       },
       "to":"d_lfdeZXSum4hYYVe32toF:APA91bErSMEyWx6R-e78eVyvL2Dvm9SAfMiQ0n4g2d7NiAm29qUqVqOsMC8PLT54EjNtREQ8rBlQM9V2Ff1ePhlAPyKRtZQWbp4tRON8PGR4vTYjN28J8-kxhlUg31R5sjhOoC22f8zt"// new s8
       //"to":"d_lfdeZXSum4hYYVe32toF:APA91bErSMEyWx6R-e78eVyvL2Dvm9SAfMiQ0n4g2d7NiAm29qUqVqOsMC8PLT54EjNtREQ8rBlQM9V2Ff1ePhlAPyKRtZQWbp4tRON8PGR4vTYjN28J8-kxhlUg31R5sjhOoC22f8zt" //TAB app
@@ -143,9 +142,9 @@ export class AppComponent implements OnInit {
 
     // console.log(dateNowISO);
     this.http.post('https://nameless-hamlet-83858.herokuapp.com/api/messages/addMessage', {
-      "id": "caregiver-arjo",
+      "id": "Camila",
       "title": "Camila J's has fallen",
-      "description": "Camila J’s has fallen. Please attend the case. !",
+      "description": "Please attend the case. !",
       "timestamp": new Date().toString(),
       "notificationId": this.uuidv4(),
       "notificationStatus": "no"
