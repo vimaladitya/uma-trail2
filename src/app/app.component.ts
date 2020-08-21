@@ -143,7 +143,7 @@ export class AppComponent implements OnInit {
 
     // console.log(dateNowISO);
     this.http.post('https://nameless-hamlet-83858.herokuapp.com/api/messages/addMessage', {
-      "id": "arjo",
+      "id": "caregiver-arjo",
       "title": "Camila J's has fallen",
       "description": "Camila J’s has fallen. Please attend the case. !",
       "timestamp": new Date().toString(),
