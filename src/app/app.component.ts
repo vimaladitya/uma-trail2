@@ -117,8 +117,8 @@ export class AppComponent implements OnInit {
     // console.log(dateNowISO);
     this.http.post('https://fcm.googleapis.com/fcm/send', {
       "data": {
-        "title": "Fall detected",
-        "body": "UMA device has triggered a fall detection !!"
+        "title": "Camila J's has fallen",
+        "body": "Camila J’s has fallen. Please attend the case. !"
       },
       "to":"cj32-v6iSka2MlNP7fcyhC:APA91bEvqgd3B-rt_Y_yhYZ7BRMH15RPvQXgTBMg1p3ai_SioBRx02W3jwxe_E7mGTbJWsvhagb-50U661YGh0OJfLTa-G7f_1tUUe8Sfx7E3jZZu-AqlGgGUeGNgbGO6jQZxwZ4eGf4"// new s8
       //"to":"d_lfdeZXSum4hYYVe32toF:APA91bErSMEyWx6R-e78eVyvL2Dvm9SAfMiQ0n4g2d7NiAm29qUqVqOsMC8PLT54EjNtREQ8rBlQM9V2Ff1ePhlAPyKRtZQWbp4tRON8PGR4vTYjN28J8-kxhlUg31R5sjhOoC22f8zt" //TAB app
