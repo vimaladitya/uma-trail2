@@ -116,7 +116,7 @@ export class AppComponent implements OnInit {
     // console.log(dateNowISO);
     this.http.post('https://fcm.googleapis.com/fcm/send', {
       "data": {
-        "title": "Camila J's has fallen",
+        "title": "Jorgen johnson J's has fallen",
         "body": "Please attend the case. !"
       },
       "to":"d_lfdeZXSum4hYYVe32toF:APA91bErSMEyWx6R-e78eVyvL2Dvm9SAfMiQ0n4g2d7NiAm29qUqVqOsMC8PLT54EjNtREQ8rBlQM9V2Ff1ePhlAPyKRtZQWbp4tRON8PGR4vTYjN28J8-kxhlUg31R5sjhOoC22f8zt"// new s8
@@ -142,13 +142,12 @@ export class AppComponent implements OnInit {
 
     // console.log(dateNowISO);
     this.http.post('https://nameless-hamlet-83858.herokuapp.com/api/messages/addMessage', {
-      "id": "Camila",
-      "title": "Camila J's has fallen",
+      "id": "Jorgen johnson J",
+      "title": "Jorgen johnson J's has fallen",
       "description": "Please attend the case. !",
       "timestamp": new Date().toString(),
       "notificationId": this.uuidv4(),
       "notificationStatus": "no"
-
     }).subscribe(posts => {
 
       console.log(posts);
