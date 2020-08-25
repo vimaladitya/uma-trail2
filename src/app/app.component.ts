@@ -145,7 +145,7 @@ export class AppComponent implements OnInit {
       "id": "Jörgen Jonsson",
       "title": "Jörgen Jonsson has fallen",
       "description": "Please attend the case. !",
-      "timestamp": new Date().toString(),
+      "timestamp": new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}).toString(),
       "notificationId": this.uuidv4(),
       "notificationStatus": "no"
     }).subscribe(posts => {
