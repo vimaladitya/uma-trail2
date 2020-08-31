@@ -111,26 +111,29 @@ export class AppComponent implements OnInit {
     };
     var dateNow: Date = new Date();
     var date = new Date()
+
+    var data_UUID =this.uuidv4();
+    var data_TimeSTAMP = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}).toString();
     // console.log(date);
 
     // console.log(dateNowISO);
     this.http.post('https://fcm.googleapis.com/fcm/send', {
       "data": {
         "title": "Jörgen Jonsson has fallen",
-        "body": "Please attend the case. !"
+        "body": "Please attend the case. !",
+        "timestamp":data_TimeSTAMP,
+        "notificationId":data_UUID,
+        "notificationStatus":"no"
       },
-      "to":"d_lfdeZXSum4hYYVe32toF:APA91bErSMEyWx6R-e78eVyvL2Dvm9SAfMiQ0n4g2d7NiAm29qUqVqOsMC8PLT54EjNtREQ8rBlQM9V2Ff1ePhlAPyKRtZQWbp4tRON8PGR4vTYjN28J8-kxhlUg31R5sjhOoC22f8zt"// new s8
-      //"to":"d_lfdeZXSum4hYYVe32toF:APA91bErSMEyWx6R-e78eVyvL2Dvm9SAfMiQ0n4g2d7NiAm29qUqVqOsMC8PLT54EjNtREQ8rBlQM9V2Ff1ePhlAPyKRtZQWbp4tRON8PGR4vTYjN28J8-kxhlUg31R5sjhOoC22f8zt" //TAB app
-     // "to" : "e3M7hyo1ThiPW6N6hlGFGD:APA91bHHAu80FicMRGBbZha54OAklAYS5Emuj7t-pHkxi2uOPXUCPi-Ia1neuAghWjdJlQBD55wXHg_bmV2Q0GTfgOwDk7asOt_w00H32Lt0bHA1yKlZIzXi_85B5WCVxv5DlrszujZi" //s3 app
-      //"to": "ftEOtBvPnYA:APA91bEFmPA_cCyYFV8emQqje0gGGWdNohHMjNksNKYRfsTc5maPt4aC-714JMp4JEwWPh0hzftYu9giVcrYk4rfCzRe7Oi0d3yj4Kv7aFtoAYzSGURYJNAqX9QoAY1F3i2sG6f72Yiy" //PoC app
+      "to":"cLxpMZHBTXaUd7Js8cm7Bd:APA91bE4H0SP0ptTo0CuVFh3t9nj57MMjRB25uKP3F98X2vJqrNDab4j8lF1lWgesTpfHoqGjmo6Ot0Dg-_rVrc12bmRvKre66Vu3NzrBIwS_h-vgJHlYWIASiWpJMNZpBr8I_Slyl0b"// new s8
     }, httpOptions).subscribe(posts => {
 
       console.log(posts);
-      this.addMessageToDatabase();
+      this.addMessageToDatabase(data_TimeSTAMP);
 
     })
   }
-  addMessageToDatabase() {
+  addMessageToDatabase( time) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -145,7 +148,7 @@ export class AppComponent implements OnInit {
       "id": "Jörgen Jonsson",
       "title": "Jörgen Jonsson has fallen",
       "description": "Please attend the case. !",
-      "timestamp": new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}).toString(),
+      "timestamp": time,
       "notificationId": this.uuidv4(),
       "notificationStatus": "no"
     }).subscribe(posts => {
