@@ -129,11 +129,11 @@ export class AppComponent implements OnInit {
     }, httpOptions).subscribe(posts => {
 
       console.log(posts);
-      this.addMessageToDatabase(data_TimeSTAMP);
+      this.addMessageToDatabase(data_TimeSTAMP,data_UUID);
 
     })
   }
-  addMessageToDatabase( time) {
+  addMessageToDatabase( time,UUID) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -149,7 +149,7 @@ export class AppComponent implements OnInit {
       "title": "Jörgen Jonsson has fallen",
       "description": "Please attend the case. !",
       "timestamp": time,
-      "notificationId": this.uuidv4(),
+      "notificationId": UUID,
       "notificationStatus": "no"
     }).subscribe(posts => {
 
