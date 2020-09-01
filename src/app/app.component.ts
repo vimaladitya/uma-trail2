@@ -123,7 +123,7 @@ export class AppComponent implements OnInit {
         "body": "Please attend the case. !",
         "timestamp":data_TimeSTAMP,
         "notificationId":data_UUID,
-        "notificationStatus":"no"
+        "notificationStatus":"fall"
       },
       //"to":"d_lfdeZXSum4hYYVe32toF:APA91bErSMEyWx6R-e78eVyvL2Dvm9SAfMiQ0n4g2d7NiAm29qUqVqOsMC8PLT54EjNtREQ8rBlQM9V2Ff1ePhlAPyKRtZQWbp4tRON8PGR4vTYjN28J8-kxhlUg31R5sjhOoC22f8zt"
       "to":"dcqOW1FpSamYptzSyt-4BC:APA91bGerxgWqnxrdDrTQq6LljEmgvBK5lh7aLglGg_o_0E2hGaLAJ129WyP7B8VPPgaAhOb69hl9E_NnJsYHA7dImXAHl31C8-TWJCAIO8AM_KSy5q0GSo8HONQ_OdIBZxMjQgPAYMW"// new MI
@@ -151,7 +151,7 @@ export class AppComponent implements OnInit {
       "description": "Please attend the case. !",
       "timestamp": time,
       "notificationId": UUID,
-      "notificationStatus": "no"
+      "notificationStatus": "fall"
     }).subscribe(posts => {
 
       console.log(posts);
